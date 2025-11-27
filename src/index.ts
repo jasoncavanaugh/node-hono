@@ -1,6 +1,5 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
-import { env } from "./env.js";
 
 const app = new Hono();
 
@@ -11,10 +10,12 @@ app.get("/", (c) => {
 serve(
   {
     fetch: app.fetch,
-    port: env.PORT,
-    hostname: env.RAILWAY_PUBLIC_DOMAIN,
+    port: 8080,
+    hostname: process.env.RAILWAY_PUBLIC_DOMAIN,
   },
   (info) => {
-    console.log(`Server is running on ${env.RAILWAY_PUBLIC_DOMAIN}:${info.port}`);
+    console.log(
+      `Server is running on ${process.env.RAILWAY_PUBLIC_DOMAIN}:${info.port}`
+    );
   }
 );
