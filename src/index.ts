@@ -1,6 +1,6 @@
 import { serve } from "@hono/node-server";
 import { Hono } from "hono";
-import { env } from "./env.ts";
+import { env } from "./env.js";
 
 const app = new Hono();
 
