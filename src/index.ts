@@ -11,6 +11,7 @@ const hostname = process.env.RAILWAY_PUBLIC_DOMAIN ?? "localhost";
 serve(
   {
     fetch: app.fetch,
+    port: 5173,
     // port: 8080,
     hostname,
   },
