@@ -11,7 +11,7 @@ serve(
   {
     fetch: app.fetch,
     // port: 3000,
-    // hostname: process.env.RAILWAY_PUBLIC_DOMAIN,
+    hostname: process.env.RAILWAY_PUBLIC_DOMAIN,
   },
   (info) => {
     console.log({ info });
