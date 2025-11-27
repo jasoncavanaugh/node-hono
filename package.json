@@ -2,9 +2,9 @@
   "name": "node-hono",
   "type": "module",
   "scripts": {
-    "dev": "tsx watch src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "dev": "bun run --hot src/index.ts",
+    "build": "bun build --target=bun --outfile=dist/server.js src",
+    "start": "bun dist/server.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.19.6",
@@ -13,6 +13,7 @@
     "zod": "^4.1.13"
   },
   "devDependencies": {
+    "@types/bun": "^1.3.3",
     "@types/node": "^20.11.17",
     "tsx": "^4.7.1",
     "typescript": "^5.8.3"
