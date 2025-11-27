@@ -3,8 +3,8 @@ import { z } from "zod";
 
 export const env = createEnv({
   server: {
-    PORT: z.number().optional(),
-    RAILWAY_PUBLIC_DOMAIN: z.string().optional(),
+    PORT: z.number().default(8080),
+    RAILWAY_PUBLIC_DOMAIN: z.string().default("localhost"),
   },
   runtimeEnv: process.env,
   /**

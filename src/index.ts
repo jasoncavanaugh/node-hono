@@ -9,7 +9,6 @@ app.get("/", (c) => {
 });
 
 const hostname = env.RAILWAY_PUBLIC_DOMAIN ?? "localhost";
-
 serve(
   {
     fetch: app.fetch,
