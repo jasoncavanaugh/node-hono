@@ -10,7 +10,7 @@ app.get("/", (c) => {
 serve(
   {
     fetch: app.fetch,
-    port: 8080,
+    port: 3000,
     hostname: process.env.RAILWAY_PUBLIC_DOMAIN,
   },
   (info) => {
