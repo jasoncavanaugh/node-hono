@@ -14,8 +14,6 @@ serve(
     // hostname: process.env.RAILWAY_PUBLIC_DOMAIN,
   },
   (info) => {
-    console.log(
-      `Server is running on ${process.env.RAILWAY_PUBLIC_DOMAIN}:${info.port}`
-    );
+    console.log({ info });
   }
 );
